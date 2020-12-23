@@ -1,62 +1,170 @@
 fileFormatVersion: 2
 guid: 17b1c1a4156cc5a488c7d5c2ba2e7ba3
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: SideWall1
-    100002: SideWall2
-    100004: SideWall3
-    100006: SideWall4
-    100008: SideWall5
-    100010: SideWall6
-    100012: SideWall7
-    100014: SideWall8
-    100016: //RootNode
-    100018: Floor
-    100020: OuterWalls
-    400000: SideWall1
-    400002: SideWall2
-    400004: SideWall3
-    400006: SideWall4
-    400008: SideWall5
-    400010: SideWall6
-    400012: SideWall7
-    400014: SideWall8
-    400016: //RootNode
-    400018: Floor
-    400020: OuterWalls
-    2100000: rep_White
-    2100002: rep_Floor
-    2300000: SideWall1
-    2300002: SideWall2
-    2300004: SideWall3
-    2300006: SideWall4
-    2300008: SideWall5
-    2300010: SideWall6
-    2300012: SideWall7
-    2300014: SideWall8
-    2300016: Floor
-    2300018: OuterWalls
-    3300000: SideWall1
-    3300002: SideWall2
-    3300004: SideWall3
-    3300006: SideWall4
-    3300008: SideWall5
-    3300010: SideWall6
-    3300012: SideWall7
-    3300014: SideWall8
-    3300016: Floor
-    3300018: OuterWalls
-    4300000: SideWall8
-    4300002: SideWall1
-    4300004: SideWall2
-    4300006: SideWall3
-    4300008: SideWall4
-    4300010: SideWall5
-    4300012: SideWall6
-    4300014: SideWall7
-    4300016: OuterWalls
-    4300018: Floor
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: SideWall1
+  - first:
+      1: 100002
+    second: SideWall2
+  - first:
+      1: 100004
+    second: SideWall3
+  - first:
+      1: 100006
+    second: SideWall4
+  - first:
+      1: 100008
+    second: SideWall5
+  - first:
+      1: 100010
+    second: SideWall6
+  - first:
+      1: 100012
+    second: SideWall7
+  - first:
+      1: 100014
+    second: SideWall8
+  - first:
+      1: 100016
+    second: //RootNode
+  - first:
+      1: 100018
+    second: Floor
+  - first:
+      1: 100020
+    second: OuterWalls
+  - first:
+      4: 400000
+    second: SideWall1
+  - first:
+      4: 400002
+    second: SideWall2
+  - first:
+      4: 400004
+    second: SideWall3
+  - first:
+      4: 400006
+    second: SideWall4
+  - first:
+      4: 400008
+    second: SideWall5
+  - first:
+      4: 400010
+    second: SideWall6
+  - first:
+      4: 400012
+    second: SideWall7
+  - first:
+      4: 400014
+    second: SideWall8
+  - first:
+      4: 400016
+    second: //RootNode
+  - first:
+      4: 400018
+    second: Floor
+  - first:
+      4: 400020
+    second: OuterWalls
+  - first:
+      21: 2100000
+    second: rep_White
+  - first:
+      21: 2100002
+    second: rep_Floor
+  - first:
+      23: 2300000
+    second: SideWall1
+  - first:
+      23: 2300002
+    second: SideWall2
+  - first:
+      23: 2300004
+    second: SideWall3
+  - first:
+      23: 2300006
+    second: SideWall4
+  - first:
+      23: 2300008
+    second: SideWall5
+  - first:
+      23: 2300010
+    second: SideWall6
+  - first:
+      23: 2300012
+    second: SideWall7
+  - first:
+      23: 2300014
+    second: SideWall8
+  - first:
+      23: 2300016
+    second: Floor
+  - first:
+      23: 2300018
+    second: OuterWalls
+  - first:
+      33: 3300000
+    second: SideWall1
+  - first:
+      33: 3300002
+    second: SideWall2
+  - first:
+      33: 3300004
+    second: SideWall3
+  - first:
+      33: 3300006
+    second: SideWall4
+  - first:
+      33: 3300008
+    second: SideWall5
+  - first:
+      33: 3300010
+    second: SideWall6
+  - first:
+      33: 3300012
+    second: SideWall7
+  - first:
+      33: 3300014
+    second: SideWall8
+  - first:
+      33: 3300016
+    second: Floor
+  - first:
+      33: 3300018
+    second: OuterWalls
+  - first:
+      43: 4300000
+    second: SideWall8
+  - first:
+      43: 4300002
+    second: SideWall1
+  - first:
+      43: 4300004
+    second: SideWall2
+  - first:
+      43: 4300006
+    second: SideWall3
+  - first:
+      43: 4300008
+    second: SideWall4
+  - first:
+      43: 4300010
+    second: SideWall5
+  - first:
+      43: 4300012
+    second: SideWall6
+  - first:
+      43: 4300014
+    second: SideWall7
+  - first:
+      43: 4300016
+    second: OuterWalls
+  - first:
+      43: 4300018
+    second: Floor
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -69,7 +177,7 @@ ModelImporter:
       name: rep_White
     second: {fileID: 2100000, guid: 6a39c0407dd85684384bf0277294e9b6, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -86,6 +194,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -100,21 +209,31 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -122,10 +241,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
-  copyAvatar: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -135,14 +257,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

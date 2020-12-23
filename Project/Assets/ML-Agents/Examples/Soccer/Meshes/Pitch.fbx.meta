@@ -1,85 +1,239 @@
 fileFormatVersion: 2
 guid: 02257fc10ef7ad149b5daa123a7df881
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: CenterPitch
-    100002: GlassSideA
-    100004: GlassSideB
-    100006: GoalAreaBlue
-    100008: GoalAreaRed
-    100010: GoalNetBlue
-    100012: GoalNetBlueOuter
-    100014: GoalNetRed
-    100016: GoalNetRedOuter
-    100018: //RootNode
-    100020: WallSideA
-    100022: WallSideB
-    100024: GoalBlue
-    100026: GoalRed
-    400000: CenterPitch
-    400002: GlassSideA
-    400004: GlassSideB
-    400006: GoalAreaBlue
-    400008: GoalAreaRed
-    400010: GoalNetBlue
-    400012: GoalNetBlueOuter
-    400014: GoalNetRed
-    400016: GoalNetRedOuter
-    400018: //RootNode
-    400020: WallSideA
-    400022: WallSideB
-    400024: GoalBlue
-    400026: GoalRed
-    2100000: rep_Pitch
-    2100002: rep_Clear
-    2100004: rep_BlackPaint
-    2100006: rep_Net
-    2100008: rep_White
-    2100010: rep_goalMaterial
-    2100012: rep_SoccerAgent
-    2300000: CenterPitch
-    2300002: GlassSideA
-    2300004: GlassSideB
-    2300006: GoalAreaBlue
-    2300008: GoalAreaRed
-    2300010: GoalNetBlue
-    2300012: GoalNetBlueOuter
-    2300014: GoalNetRed
-    2300016: GoalNetRedOuter
-    2300018: //RootNode
-    2300020: WallSideA
-    2300022: WallSideB
-    2300024: GoalBlue
-    2300026: GoalRed
-    3300000: CenterPitch
-    3300002: GlassSideA
-    3300004: GlassSideB
-    3300006: GoalAreaBlue
-    3300008: GoalAreaRed
-    3300010: GoalNetBlue
-    3300012: GoalNetBlueOuter
-    3300014: GoalNetRed
-    3300016: GoalNetRedOuter
-    3300018: //RootNode
-    3300020: WallSideA
-    3300022: WallSideB
-    3300024: GoalBlue
-    3300026: GoalRed
-    4300000: Pitch
-    4300002: GlassSideA
-    4300004: GlassSideB
-    4300006: GoalNetBlue
-    4300008: GoalNetBlueOuter
-    4300010: GoalNetRed
-    4300012: GoalNetRedOuter
-    4300014: WallSideA
-    4300016: WallSideB
-    4300018: GoalAreaBlue
-    4300020: GoalAreaRed
-    4300022: CenterPitch
-    4300024: GoalBlue
-    4300026: GoalRed
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: CenterPitch
+  - first:
+      1: 100002
+    second: GlassSideA
+  - first:
+      1: 100004
+    second: GlassSideB
+  - first:
+      1: 100006
+    second: GoalAreaBlue
+  - first:
+      1: 100008
+    second: GoalAreaRed
+  - first:
+      1: 100010
+    second: GoalNetBlue
+  - first:
+      1: 100012
+    second: GoalNetBlueOuter
+  - first:
+      1: 100014
+    second: GoalNetRed
+  - first:
+      1: 100016
+    second: GoalNetRedOuter
+  - first:
+      1: 100018
+    second: //RootNode
+  - first:
+      1: 100020
+    second: WallSideA
+  - first:
+      1: 100022
+    second: WallSideB
+  - first:
+      1: 100024
+    second: GoalBlue
+  - first:
+      1: 100026
+    second: GoalRed
+  - first:
+      4: 400000
+    second: CenterPitch
+  - first:
+      4: 400002
+    second: GlassSideA
+  - first:
+      4: 400004
+    second: GlassSideB
+  - first:
+      4: 400006
+    second: GoalAreaBlue
+  - first:
+      4: 400008
+    second: GoalAreaRed
+  - first:
+      4: 400010
+    second: GoalNetBlue
+  - first:
+      4: 400012
+    second: GoalNetBlueOuter
+  - first:
+      4: 400014
+    second: GoalNetRed
+  - first:
+      4: 400016
+    second: GoalNetRedOuter
+  - first:
+      4: 400018
+    second: //RootNode
+  - first:
+      4: 400020
+    second: WallSideA
+  - first:
+      4: 400022
+    second: WallSideB
+  - first:
+      4: 400024
+    second: GoalBlue
+  - first:
+      4: 400026
+    second: GoalRed
+  - first:
+      21: 2100000
+    second: rep_Pitch
+  - first:
+      21: 2100002
+    second: rep_Clear
+  - first:
+      21: 2100004
+    second: rep_BlackPaint
+  - first:
+      21: 2100006
+    second: rep_Net
+  - first:
+      21: 2100008
+    second: rep_White
+  - first:
+      21: 2100010
+    second: rep_goalMaterial
+  - first:
+      21: 2100012
+    second: rep_SoccerAgent
+  - first:
+      23: 2300000
+    second: CenterPitch
+  - first:
+      23: 2300002
+    second: GlassSideA
+  - first:
+      23: 2300004
+    second: GlassSideB
+  - first:
+      23: 2300006
+    second: GoalAreaBlue
+  - first:
+      23: 2300008
+    second: GoalAreaRed
+  - first:
+      23: 2300010
+    second: GoalNetBlue
+  - first:
+      23: 2300012
+    second: GoalNetBlueOuter
+  - first:
+      23: 2300014
+    second: GoalNetRed
+  - first:
+      23: 2300016
+    second: GoalNetRedOuter
+  - first:
+      23: 2300018
+    second: //RootNode
+  - first:
+      23: 2300020
+    second: WallSideA
+  - first:
+      23: 2300022
+    second: WallSideB
+  - first:
+      23: 2300024
+    second: GoalBlue
+  - first:
+      23: 2300026
+    second: GoalRed
+  - first:
+      33: 3300000
+    second: CenterPitch
+  - first:
+      33: 3300002
+    second: GlassSideA
+  - first:
+      33: 3300004
+    second: GlassSideB
+  - first:
+      33: 3300006
+    second: GoalAreaBlue
+  - first:
+      33: 3300008
+    second: GoalAreaRed
+  - first:
+      33: 3300010
+    second: GoalNetBlue
+  - first:
+      33: 3300012
+    second: GoalNetBlueOuter
+  - first:
+      33: 3300014
+    second: GoalNetRed
+  - first:
+      33: 3300016
+    second: GoalNetRedOuter
+  - first:
+      33: 3300018
+    second: //RootNode
+  - first:
+      33: 3300020
+    second: WallSideA
+  - first:
+      33: 3300022
+    second: WallSideB
+  - first:
+      33: 3300024
+    second: GoalBlue
+  - first:
+      33: 3300026
+    second: GoalRed
+  - first:
+      43: 4300000
+    second: Pitch
+  - first:
+      43: 4300002
+    second: GlassSideA
+  - first:
+      43: 4300004
+    second: GlassSideB
+  - first:
+      43: 4300006
+    second: GoalNetBlue
+  - first:
+      43: 4300008
+    second: GoalNetBlueOuter
+  - first:
+      43: 4300010
+    second: GoalNetRed
+  - first:
+      43: 4300012
+    second: GoalNetRedOuter
+  - first:
+      43: 4300014
+    second: WallSideA
+  - first:
+      43: 4300016
+    second: WallSideB
+  - first:
+      43: 4300018
+    second: GoalAreaBlue
+  - first:
+      43: 4300020
+    second: GoalAreaRed
+  - first:
+      43: 4300022
+    second: CenterPitch
+  - first:
+      43: 4300024
+    second: GoalBlue
+  - first:
+      43: 4300026
+    second: GoalRed
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -117,7 +271,7 @@ ModelImporter:
       name: rep_goalMaterial
     second: {fileID: 2100000, guid: ef4e40785f0a2bc409010f7bed622ee0, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -134,6 +288,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -148,21 +303,31 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -170,10 +335,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 1
-  copyAvatar: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -183,14 +351,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
