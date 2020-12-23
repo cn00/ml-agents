@@ -360,13 +360,9 @@ namespace Unity.MLAgents
             catch
             {
                 // No arg passed, or malformed port number.
-#if UNITY_EDITOR
                 // Try connecting on the default editor port
+                Debug.Log("This is an executable, so we may not need to connect.");
                 return k_EditorTrainingPort;
-#else
-                // This is an executable, so we don't try to connect.
-                return -1;
-#endif
             }
         }
 
@@ -411,6 +407,7 @@ namespace Unity.MLAgents
 
             // Try to launch the communicator by using the arguments passed at launch
             var port = ReadPortFromArgs();
+            Debug.Log($"InitializeEnvironment port:{port}");
             if (port > 0)
             {
                 Communicator = new RpcCommunicator(

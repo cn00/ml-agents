@@ -168,6 +168,7 @@ namespace Unity.MLAgents
     [RequireComponent(typeof(BehaviorParameters))]
     public partial class Agent : MonoBehaviour, ISerializationCallbackReceiver, IActionReceiver
     {
+        public int score;
         IPolicy m_Brain;
         BehaviorParameters m_PolicyFactory;
 

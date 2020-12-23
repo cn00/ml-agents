@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.MLAgents;
@@ -9,16 +11,16 @@ public class TennisAgent : Agent
     [Header("Specific to Tennis")]
     public GameObject ball;
     public bool invertX;
-    public int score;
+    // public int score;
     public GameObject myArea;
     public float angle;
     public float scale;
 
-    Text m_TextComponent;
-    Rigidbody m_AgentRb;
-    Rigidbody m_BallRb;
-    float m_InvertMult;
-    EnvironmentParameters m_ResetParams;
+    public Text m_TextComponent;
+    public Rigidbody m_AgentRb;
+    public Rigidbody m_BallRb;
+    public float m_InvertMult;
+    public EnvironmentParameters m_ResetParams;
 
     // Looks for the scoreboard based on the name of the gameObjects.
     // Do not modify the names of the Score GameObjects
@@ -28,8 +30,8 @@ public class TennisAgent : Agent
 
     public override void Initialize()
     {
-        m_AgentRb = GetComponent<Rigidbody>();
-        m_BallRb = ball.GetComponent<Rigidbody>();
+        // m_AgentRb = GetComponent<Rigidbody>();
+        // m_BallRb = ball.GetComponent<Rigidbody>();
         var canvas = GameObject.Find(k_CanvasName);
         GameObject scoreBoard;
         m_ResetParams = Academy.Instance.EnvironmentParameters;
@@ -45,6 +47,7 @@ public class TennisAgent : Agent
         SetResetParameters();
     }
 
+    public List<float> Observations;
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(m_InvertMult * (transform.position.x - myArea.transform.position.x));
@@ -58,31 +61,40 @@ public class TennisAgent : Agent
         sensor.AddObservation(m_BallRb.velocity.y);
 
         sensor.AddObservation(m_InvertMult * gameObject.transform.rotation.z);
+
+        #if UNITY_EDITOR
+        Observations = GetObservations().ToList();
+        #endif
     }
 
+    public List<float> m_Actions;
     public override void OnActionReceived(ActionBuffers actionBuffers)
 
     {
         var continuousActions = actionBuffers.ContinuousActions;
+        #if UNITY_EDITOR
+        m_Actions = continuousActions.ToList();
+        #endif
         var moveX = Mathf.Clamp(continuousActions[0], -1f, 1f) * m_InvertMult;
         var moveY = Mathf.Clamp(continuousActions[1], -1f, 1f);
-        var rotate = Mathf.Clamp(continuousActions[2], -1f, 1f) * m_InvertMult;
+        var rotateZ = Mathf.Clamp(continuousActions[2], -1f, 1f) * m_InvertMult;
 
-        if (moveY > 0.5 && transform.position.y - transform.parent.transform.position.y < -1.5f)
+        // if (moveY > 0.5 && transform.localPosition.y < -1.5f)
+        // {
+        //     m_AgentRb.velocity = new Vector3(m_AgentRb.velocity.x, 7f, 0f);
+        // }
+
+        m_AgentRb.velocity = new Vector3(moveX * 30f, /*moveY * 30f*/ m_AgentRb.velocity.y, 0f);
+
+        m_AgentRb.transform.rotation = Quaternion.Euler(0f, -180f, 55f * rotateZ + m_InvertMult * 90f);
+
+        if ( invertX && transform.localPosition.x < -m_InvertMult ||
+            !invertX && transform.localPosition.x > -m_InvertMult)
         {
-            m_AgentRb.velocity = new Vector3(m_AgentRb.velocity.x, 7f, 0f);
-        }
-
-        m_AgentRb.velocity = new Vector3(moveX * 30f, m_AgentRb.velocity.y, 0f);
-
-        m_AgentRb.transform.rotation = Quaternion.Euler(0f, -180f, 55f * rotate + m_InvertMult * 90f);
-
-        if (invertX && transform.position.x - transform.parent.transform.position.x < -m_InvertMult ||
-            !invertX && transform.position.x - transform.parent.transform.position.x > -m_InvertMult)
-        {
-            transform.position = new Vector3(-m_InvertMult + transform.parent.transform.position.x,
-                transform.position.y,
-                transform.position.z);
+            transform.localPosition = new Vector3(
+                -m_InvertMult * 7f,
+                transform.localPosition.y,
+                transform.localPosition.z);
         }
 
         m_TextComponent.text = score.ToString();
