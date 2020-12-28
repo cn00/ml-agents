@@ -16,7 +16,8 @@ namespace Unity.MLAgents
     /// Struct that contains all the information for an Agent, including its
     /// observations, actions and current status.
     /// </summary>
-    internal struct AgentInfo
+    [Serializable]
+    public struct AgentInfo
     {
         /// <summary>
         /// Keeps track of the last vector action taken by the Brain.
@@ -168,7 +169,7 @@ namespace Unity.MLAgents
     [RequireComponent(typeof(BehaviorParameters))]
     public partial class Agent : MonoBehaviour, ISerializationCallbackReceiver, IActionReceiver
     {
-        public int score;
+        public float score;
         IPolicy m_Brain;
         BehaviorParameters m_PolicyFactory;
 
@@ -231,7 +232,7 @@ namespace Unity.MLAgents
         /// during training and the code you run during inference.
         /// </example>
         [FormerlySerializedAs("maxStep")]
-        [HideInInspector] public int MaxStep;
+        public int MaxStep;
 
         /// Current Agent information (message sent to Brain).
         AgentInfo m_Info;
@@ -242,30 +243,30 @@ namespace Unity.MLAgents
         /// action that we wish to reinforce/reward, and set to a negative value
         /// when the agent performs a "bad" action that we wish to punish/deter.
         /// Additionally, the magnitude of the reward should not exceed 1.0
-        float m_Reward;
+        public float m_Reward;
 
         /// Keeps track of the cumulative reward in this episode.
-        float m_CumulativeReward;
+        public float m_CumulativeReward;
 
         /// Whether or not the agent requests an action.
-        bool m_RequestAction;
+        public bool m_RequestAction;
 
         /// Whether or not the agent requests a decision.
-        bool m_RequestDecision;
+        public bool m_RequestDecision;
 
         /// Keeps track of the number of steps taken by the agent in this episode.
         /// Note that this value is different for each agent, and may not overlap
         /// with the step counter in the Academy, since agents reset based on
         /// their own experience.
-        int m_StepCount;
+        public int m_StepCount;
 
         /// Number of times the Agent has completed an episode.
-        int m_CompletedEpisodes;
+        public int m_CompletedEpisodes;
 
         /// Episode identifier each agent receives. It is used
         /// to separate between different agents in the environment.
         /// This Id will be changed every time the Agent resets.
-        int m_EpisodeId;
+        public int m_EpisodeId;
 
         /// Whether or not the Agent has been initialized already
         bool m_Initialized;
@@ -290,7 +291,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// VectorSensor which is written to by AddVectorObs
         /// </summary>
-        internal VectorSensor collectObservationsSensor;
+        public VectorSensor collectObservationsSensor;
 
         private RecursionChecker m_CollectObservationsChecker = new RecursionChecker("CollectObservations");
         private RecursionChecker m_OnEpisodeBeginChecker = new RecursionChecker("OnEpisodeBegin");
@@ -951,6 +952,7 @@ namespace Unity.MLAgents
             var param = m_PolicyFactory.BrainParameters;
             if (param.VectorObservationSize > 0)
             {
+                // Debug.LogWarning($"new VectorSensor({param.VectorObservationSize})");
                 collectObservationsSensor = new VectorSensor(param.VectorObservationSize);
                 if (param.NumStackedVectorObservations > 1)
                 {

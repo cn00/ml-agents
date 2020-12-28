@@ -101,12 +101,13 @@ namespace Unity.MLAgents
         /// </summary>
         internal const string k_PackageVersion = "1.7.0-preview";
 
-        const int k_EditorTrainingPort = 5004;
+        public const int k_EditorTrainingPort = 5004;
 
         const string k_PortCommandLineFlag = "--mlagents-port";
 
         // Lazy initializer pattern, see https://csharpindepth.com/articles/singleton#lazy
         static Lazy<Academy> s_Lazy = new Lazy<Academy>(() => new Academy());
+        // private static Academy m_Instance = null;
 
         /// <summary>
         ///Reports whether the Academy has been initialized yet.
@@ -139,31 +140,31 @@ namespace Unity.MLAgents
 
         /// The number of episodes completed by the environment. Incremented
         /// each time the environment is reset.
-        int m_EpisodeCount;
+        public int m_EpisodeCount;
 
         /// The number of steps completed within the current episode. Incremented
         /// each time a step is taken in the environment. Is reset to 0 during
         /// <see cref="EnvironmentReset"/>.
-        int m_StepCount;
+        public int m_StepCount;
 
         /// The number of total number of steps completed during the whole simulation. Incremented
         /// each time a step is taken in the environment.
-        int m_TotalStepCount;
+        public int m_TotalStepCount;
 
         /// Pointer to the communicator currently in use by the Academy.
         internal ICommunicator Communicator;
 
-        bool m_Initialized;
+        public bool m_Initialized;
         List<ModelRunner> m_ModelRunners = new List<ModelRunner>();
 
-        // Flag used to keep track of the first time the Academy is reset.
-        bool m_HadFirstReset;
+        /// Flag used to keep track of the first time the Academy is reset.
+        public bool m_HadFirstReset;
 
-        // Detect an Academy step called by user code that is also called by the Academy.
+        /// Detect an Academy step called by user code that is also called by the Academy.
         private RecursionChecker m_StepRecursionChecker = new RecursionChecker("EnvironmentStep");
 
-        // Random seed used for inference.
-        int m_InferenceSeed;
+        /// Random seed used for inference.
+        public int m_InferenceSeed;
 
         /// <summary>
         /// Set the random seed used for inference. This should be set before any Agents are added
@@ -224,7 +225,7 @@ namespace Unity.MLAgents
         public event Action OnEnvironmentReset;
 
         AcademyFixedUpdateStepper m_FixedUpdateStepper;
-        GameObject m_StepperObject;
+        public GameObject m_StepperObject;
 
 
         /// <summary>

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
@@ -7,13 +8,14 @@ namespace Unity.MLAgents.Sensors
     /// <summary>
     /// A sensor implementation for vector observations.
     /// </summary>
+    [Serializable]
     public class VectorSensor : ISensor
     {
+        public string m_Name;
+        public int[] m_Shape;
         // TODO use float[] instead
         // TODO allow setting float[]
-        List<float> m_Observations;
-        int[] m_Shape;
-        string m_Name;
+        public List<float> m_Observations;
 
         /// <summary>
         /// Initializes the sensor.
@@ -39,7 +41,7 @@ namespace Unity.MLAgents.Sensors
             if (m_Observations.Count > expectedObservations)
             {
                 // Too many observations, truncate
-                Debug.LogWarningFormat(
+                Debug.LogFormat(
                     "More observations ({0}) made than vector observation size ({1}). The observations will be truncated.",
                     m_Observations.Count, expectedObservations
                 );
@@ -48,7 +50,7 @@ namespace Unity.MLAgents.Sensors
             else if (m_Observations.Count < expectedObservations)
             {
                 // Not enough observations; pad with zeros.
-                Debug.LogWarningFormat(
+                Debug.LogFormat(
                     "Fewer observations ({0}) made than vector observation size ({1}). The observations will be padded.",
                     m_Observations.Count, expectedObservations
                 );
