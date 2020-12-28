@@ -104,7 +104,8 @@ namespace Unity.MLAgents.Actuators
         /// </summary>
         public void Clear()
         {
-            System.Array.Clear(Array, Offset, Length);
+            if(!IsEmpty())
+                System.Array.Clear(Array, Offset, Length);
         }
 
         /// <summary>
