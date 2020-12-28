@@ -467,7 +467,7 @@ namespace Unity.MLAgents
                 if (filename == null)
                 {
                     var activeScene = SceneManager.GetActiveScene();
-                    var timerDir = Path.Combine(Application.dataPath, "ML-Agents", "Timers");
+                    var timerDir = Path.Combine("ML-Agents", "Timers");
                     Directory.CreateDirectory(timerDir);
 
                     filename = Path.Combine(timerDir, $"{activeScene.name}_timers.json");
